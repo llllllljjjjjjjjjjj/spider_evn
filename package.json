@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "isolated-vm": "^5.0.4",
+    "node-inspect": "^2.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+1. 浏览器中 constructor
+   |  函数.constructor === window.Function
+
+2. node中 constructor
+   |  函数.constructor === Function（不挂在 global）
+
+3. 核心规则
+   <1>. Object.prototype
+   |  Object.prototype.constructor === Object
+
+   <2>. Function.prototype
+   |  Function.prototype.constructor === Function
+
+   <3>. 普通函数
+   |  普通函数.constructor === Function
+
+   <4>. Function 自身
+   |  Function.constructor === Function
+
+   <5>. Object 自身
+   |  Object.constructor === Function
+
+   <6>. 任意对象
+   |  对象.constructor === Object

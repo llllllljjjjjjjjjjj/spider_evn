@@ -1,0 +1,17 @@
+1.浏览器中Document.prototype.createElement("div")报错
+    只能用document（实例对象）调用
+    Document.prototype.createElement === document.createElement
+    利用call改变this指针，伪造
+2.WindowProperties 是浏览器引擎内部隐式父原型，
+    正常网页 JS 无权访问、不可见，
+但完整 window 原型链必须挂载它，不然环境残缺；
+补完必须删掉，防止属性冲突、遍历泄露、检测特征暴露。
+3.浏览中window === self === top === parent === parent.window.self === self.top ······
+    window = {}
+    self = window
+    top = window
+    parent = window
+    过检测
+        top = self = window = new Proxy(window, {})   ----只能new一次
+    ****解决重复代理问题***
+4.特殊属性---设置后可以访问，但是通过获取所有属性描述符得不到

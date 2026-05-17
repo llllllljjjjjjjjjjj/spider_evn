@@ -1,0 +1,17 @@
+1.浏览器中的Function
+    window.Function
+2.node中的Function
+    Function不是挂在global上
+
+3.相同点
+    <1>.原型链终点
+        Object.prototype.__proto__ === null
+    <2>.Function作为对象
+        Function.__proto__ === Function.prototype
+    <3>.Function.prototype作为对象
+        Function.prototype.__proto__ === Object.prototype
+    <4>.Function作为函数
+        普通函数.__proto__ === Function.prototype
+        Function.__proto__ === Function.prototype
+    <5>.Object作为函数
+        Object.__proto__ === Function.prototype

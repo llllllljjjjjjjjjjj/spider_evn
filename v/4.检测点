@@ -1,0 +1,7 @@
+1.代理对象
+    先保存原对象，再在某个位置===
+    不可以用a instanceof Proxy检测
+2.eval 是 JS 中唯一有「直接 / 间接调用模式」的特殊函数
+代理对象后，this指针改变
+    导致eval.toString()与window.eval.toString()结果不一样
+3.删了globalThis[Symbol.toStringTag]，可以把window.tosting()的[object global]变为[object window]
